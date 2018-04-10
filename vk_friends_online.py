@@ -13,6 +13,7 @@ def get_user_password():
 
 
 def get_online_friends(login, password):
+    current_version = '5.74'
     session = vk.AuthSession(
         app_id=settings.APP_ID,
         user_login=login,
@@ -20,8 +21,11 @@ def get_online_friends(login, password):
         scope='friends'
     )
     api = vk.API(session)
-    ids_online = ', '.join((map(str, api.friends.getOnline(v=5.74))))
-    friends_online = api.users.get(user_ids=ids_online, v=5.74)
+    api.stats.trackVisitor(v=current_version)
+    ids_online = ', '.join(
+        (map(str, api.friends.getOnline(v=current_version)))
+    )
+    friends_online = api.users.get(user_ids=ids_online, v=current_version)
     return friends_online
 
 
@@ -34,7 +38,7 @@ def output_friends_to_console(friends_online):
 if __name__ == '__main__':
     login = get_user_login()
     if not login:
-        sys.exit('You should type login')
+        sys.exit('You should input login')
     password = get_user_password()
     try:
         friends_online = get_online_friends(login, password)

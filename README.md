@@ -1,10 +1,10 @@
 # Watcher of Friends Online
 
-With this script you can see who of your VK friends is online .
+With this script you can see who of your VK friends is online right in the command line.
 
 # Quickstart
 
-You need to enter login and password after starting the script. For correct work you should add file **settings_local.py** to the script folder with your **APP_ID** variable in it.
+You need to enter login and password after starting the script. You can change **APP_ID** in **settings.py** file.
 
 ### Examples of script launch on Linux, Python 3.5:
 
