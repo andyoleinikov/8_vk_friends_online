@@ -1,6 +1,24 @@
 # Watcher of Friends Online
 
-[TODO. There will be project description]
+With this script you can see who of your VK friends is online .
+
+# Quickstart
+
+You need to enter login and password after starting the script. For correct work you should add file **settings_local.py** to the script folder with your **APP_ID** variable in it.
+
+### Examples of script launch on Linux, Python 3.5:
+
+```bash
+
+$ python vk_friends_online.py
+Login: <your login>
+Password: <your password>
+Your friends online:
+Some One
+Someone Else
+And So On
+
+```
 
 # How to Install
 
