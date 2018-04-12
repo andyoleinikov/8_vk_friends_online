@@ -1,6 +1,6 @@
 # Watcher of Friends Online
 
-With this script you can see who of your VK friends is online right in the command line.
+With this script you can see who of your VK friends is online right in the command line. To recieve **APP_ID** you need to create a standalone app on [VK apps page](https://vk.com/apps?act=manage).
 
 # Quickstart
 
